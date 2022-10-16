@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileConverter", "FileConverter\FileConverter.csproj", "{751E0A6C-CC65-4688-9D75-FFC212EDB09F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsvFileConverter", "CsvFileConverter\CsvFileConverter.csproj", "{751E0A6C-CC65-4688-9D75-FFC212EDB09F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

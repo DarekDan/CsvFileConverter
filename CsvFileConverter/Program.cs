@@ -18,7 +18,7 @@ static class Program
         var outputEncodingOption = new Option<string>(aliases: new []{"-oe","--outputEncoding"}, getDefaultValue: () => "Windows-1252");
         var outputDelimiterOption = new Option<string>(aliases: new []{"-od","--outputDelimiter"}, getDefaultValue: () => ",");
         var useHeaderRecordsOption = new Option<bool>(aliases: new []{"-hdr","--hasHeaderRow"}, getDefaultValue: () => true);
-        var rootCommand = new RootCommand("FileConverter Utility")
+        var rootCommand = new RootCommand("CsvFileConverter Utility")
         {
             inputFileOption,
             inputEncodingOption,
