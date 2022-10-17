@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using System.Text;
 
-[assembly:InternalsVisibleTo("CsvFileConverter.Tests")]
+[assembly: InternalsVisibleTo("CsvFileConverter.Tests")]
 
 namespace Fiserv;
 
@@ -15,12 +15,13 @@ static class Program
             new Option<FileInfo?>(aliases: new[] { "-i", "--inputFile" }, description: "The file to read from")
                 { IsRequired = true };
         var inputEncodingOption =
-            new Option<string>(aliases: new[] { "-ie", "--inputEncoding" }, getDefaultValue: () => "utf-8")
-                { IsRequired = true };
+            new Option<string>(aliases: new[] { "-ie", "--inputEncoding" }, getDefaultValue: () => "utf-8");
         var inputDelimiterOption =
-            new Option<string>(aliases: new[] { "-id", "--inputDelimiter" }, getDefaultValue: () => "\t");
+            new Option<string>(aliases: new[] { "-id", "--inputDelimiter" }, getDefaultValue: () => "\t",
+                description: "The default input delimiter is TAB, 0x09");
         var outputFileOption =
-            new Option<FileInfo?>(aliases: new[] { "-o", "--outputFile" }, description: "The file to write to");
+            new Option<FileInfo?>(aliases: new[] { "-o", "--outputFile" }, description: "The file to write to")
+                { IsRequired = true };
         var outputEncodingOption = new Option<string>(aliases: new[] { "-oe", "--outputEncoding" },
             getDefaultValue: () => "Windows-1252");
         var outputDelimiterOption =
