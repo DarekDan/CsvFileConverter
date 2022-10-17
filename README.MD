@@ -30,3 +30,5 @@ Options:
 ```shell
 dotnet publish -c Release -r linux-x64 -p:PublishSingleFile=true -p:IncludeAllContentForSelfExtract=true -p:IncludeNativeLibrariesForSelfExtract=true --self-contained true
 ```
+
+[dotnet publish RIDs](https://learn.microsoft.com/en-us/dotnet/core/rid-catalog)
