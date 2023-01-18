@@ -52,8 +52,8 @@ static class Program
             var outFile = ctx.ParseResult.GetValueForOption(outputFileOption);
             var conversionConfig = new ConversionConfig
             {
-                InputDelimiter = ctx.ParseResult.GetValueForOption(inputDelimiterOption),
-                OutputDelimiter = ctx.ParseResult.GetValueForOption(outputDelimiterOption),
+                InputDelimiter = ctx.ParseResult.GetValueForOption(inputDelimiterOption).ConvertWhenHex(),
+                OutputDelimiter = ctx.ParseResult.GetValueForOption(outputDelimiterOption).ConvertWhenHex(),
                 HasHeader = ctx.ParseResult.GetValueForOption(useHeaderRecordsOption),
                 RemoveNonPrintableCharacters = ctx.ParseResult.GetValueForOption(removeNonPrintableCharactersOption),
                 IncludeCrInLineEnding = ctx.ParseResult.GetValueForOption(includeCrOption)
